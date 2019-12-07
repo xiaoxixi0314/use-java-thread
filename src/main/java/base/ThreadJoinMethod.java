@@ -4,6 +4,9 @@ import base.util.SleepTool;
 
 import java.util.Objects;
 
+/**
+ * join 方法，可以保证线程顺序执行
+ */
 public class ThreadJoinMethod {
 
     static class YouRunnable implements Runnable {
@@ -16,7 +19,6 @@ public class ThreadJoinMethod {
         @Override
         public void run() {
             String threadName = Thread.currentThread().getName();
-            SleepTool.sleep(1);
             System.out.println("["+threadName+"] You start to do work[you]");
             try {
                 if (!Objects.isNull(thread)) {
@@ -25,6 +27,7 @@ public class ThreadJoinMethod {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            SleepTool.sleep(1);
             System.out.println("["+threadName+"] You start work done [you]");
         }
     }
@@ -40,7 +43,6 @@ public class ThreadJoinMethod {
         public void run() {
             String threadName = Thread.currentThread().getName();
             System.out.println("["+threadName+"] Your goddess start to do work[goddess]");
-            SleepTool.sleep(1);
             try {
                 if (!Objects.isNull(thread)) {
                     thread.join();
@@ -48,6 +50,7 @@ public class ThreadJoinMethod {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            SleepTool.sleep(1);
             System.out.println("["+threadName+"] Your goddess work done[goddess]");
         }
     }
@@ -56,8 +59,8 @@ public class ThreadJoinMethod {
         @Override
         public void run() {
             String threadName = Thread.currentThread().getName();
-            SleepTool.sleep(2);
             System.out.println("["+threadName+"] Your goddess boyfriend start to do work[goddess boyfriend]");
+            SleepTool.sleep(1);
             System.out.println("["+threadName+"] Your goddess boyfriend work done[goddess boyfriend]");
         }
     }
@@ -70,10 +73,10 @@ public class ThreadJoinMethod {
         Thread goddess = new Thread(new YourGoddess(goddessBf));
         goddess.setName("your-goddess");
 
-        Thread youThread = new Thread(new YouRunnable(goddess));
-        youThread.setName("you-thread");
+        Thread you = new Thread(new YouRunnable(goddess));
+        you.setName("you-thread");
 
-        youThread.start();
+        you.start();
         goddess.start();
         goddessBf.start();
 
