@@ -20,7 +20,7 @@ public class VolatileVisibility {
             String threadName = Thread.currentThread().getName();
             System.out.println("["+threadName+"] is running...");
 
-            while(!ready);// 无限循环
+            while(!ready){}// 无限循环
 
             System.out.println("[number] is "+ number);
             System.out.println("["+threadName+"] is over....");
