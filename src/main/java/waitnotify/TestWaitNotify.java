@@ -32,7 +32,7 @@ public class TestWaitNotify {
             thread.setName("wait-site-" + i);
             thread.start();
         }
-        SleepTool.sleep(2);
+        SleepTool.sleepSec(2);
         express.changeKm();
     }
 }

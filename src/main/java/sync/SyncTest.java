@@ -67,7 +67,7 @@ public class SyncTest {
 //            thread.start();
 //        }
 
-        SleepTool.sleep(2);
+        SleepTool.sleepSec(2);
 
         System.out.println(syncTest.getCount());
 

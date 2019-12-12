@@ -27,7 +27,7 @@ public class ThreadJoinMethod {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            SleepTool.sleep(1);
+            SleepTool.sleepSec(1);
             System.out.println("["+threadName+"] You start work done [you]");
         }
     }
@@ -50,7 +50,7 @@ public class ThreadJoinMethod {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            SleepTool.sleep(1);
+            SleepTool.sleepSec(1);
             System.out.println("["+threadName+"] Your goddess work done[goddess]");
         }
     }
@@ -60,7 +60,7 @@ public class ThreadJoinMethod {
         public void run() {
             String threadName = Thread.currentThread().getName();
             System.out.println("["+threadName+"] Your goddess boyfriend start to do work[goddess boyfriend]");
-            SleepTool.sleep(1);
+            SleepTool.sleepSec(1);
             System.out.println("["+threadName+"] Your goddess boyfriend work done[goddess boyfriend]");
         }
     }

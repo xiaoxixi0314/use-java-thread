@@ -32,10 +32,10 @@ public class VolatileVisibility {
         thread.setName("visibility-thread");
         thread.start();
 
-        SleepTool.sleep(1);
+        SleepTool.sleepSec(1);
         number = 51;
         ready = true;
-        SleepTool.sleep(5);
+        SleepTool.sleepSec(5);
 
         System.out.println("main thread is over....");
     }

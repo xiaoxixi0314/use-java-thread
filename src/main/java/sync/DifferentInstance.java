@@ -38,13 +38,13 @@ public class DifferentInstance {
 
     private synchronized void sync1Instance() {
         System.out.println("【1】 test sync1 started....");
-        SleepTool.sleep(2);
+        SleepTool.sleepSec(2);
         System.out.println("【1】 test sync1 end....");
     }
 
     private synchronized void sync2Instance() {
         System.out.println("【2】 test sync1 started....");
-        SleepTool.sleep(2);
+        SleepTool.sleepSec(2);
         System.out.println("【2】 test sync1 end....");
     }
 

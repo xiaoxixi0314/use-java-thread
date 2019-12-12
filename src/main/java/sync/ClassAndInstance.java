@@ -32,13 +32,13 @@ public class ClassAndInstance {
 
     private synchronized void syncInstance(){
         System.out.println("[sync instance] sync instance is start...");
-        SleepTool.sleep(2);
+        SleepTool.sleepSec(2);
         System.out.println("[sync instance] sync instance end...");
     }
 
     private static synchronized void syncClass(){
         System.out.println("[sync class] sync class is start...");
-        SleepTool.sleep(2);
+        SleepTool.sleepSec(2);
         System.out.println("[sync class] sync class end...");
     }
 

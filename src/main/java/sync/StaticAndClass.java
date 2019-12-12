@@ -34,14 +34,14 @@ public class StaticAndClass {
     private void syncStatic(){
         synchronized (object) {
             System.out.println("[sync static instance] sync static instance is start...");
-            SleepTool.sleep(2);
+            SleepTool.sleepSec(2);
             System.out.println("[sync static instance] sync static instance end...");
         }
     }
 
     private static synchronized void syncClass(){
         System.out.println("[sync class] sync class is start...");
-        SleepTool.sleep(2);
+        SleepTool.sleepSec(2);
         System.out.println("[sync class] sync class end...");
     }
 

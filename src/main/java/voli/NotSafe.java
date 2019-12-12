@@ -32,7 +32,7 @@ public class NotSafe {
             thread.start();
         }
 
-        SleepTool.sleep(2);
+        SleepTool.sleepSec(2);
 
         System.out.println(notSafe.getCount());
     }
