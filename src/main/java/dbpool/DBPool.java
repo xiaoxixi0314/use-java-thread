@@ -30,7 +30,7 @@ public class DBPool {
      * @return
      */
     public Connection getConnection(long waitMills) throws InterruptedException{
-        // 小于0表示用不超时模式
+        // 小于0表示永不超时模式
         if (waitMills < 0) {
             synchronized (pool) {
                 while (pool.isEmpty()) {
