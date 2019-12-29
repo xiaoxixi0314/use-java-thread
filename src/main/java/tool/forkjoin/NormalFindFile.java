@@ -1,4 +1,4 @@
-package forkjoin;
+package tool.forkjoin;
 
 import java.io.File;
 import java.util.Objects;

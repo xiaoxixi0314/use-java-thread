@@ -5,10 +5,10 @@ import java.util.Objects;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class DBPoolTest {
+public class DBPoolSemaphoreTest {
 
     // 初始化一个20个连接的连接池
-    private static DBPool dbPool = new DBPool(20);
+    private static DBPoolSemaphore dbPoolUseSemaphore = new DBPoolSemaphore(20);
 
     private static final int THREAD_NUMS = 50;
     private static final CountDownLatch count_down = new CountDownLatch(THREAD_NUMS);
@@ -30,7 +30,7 @@ public class DBPoolTest {
             String threadName = Thread.currentThread().getName();
             while (count > 0) {
                 try {
-                    Connection connection = dbPool.getConnection(1000);
+                    Connection connection = dbPoolUseSemaphore.getConnection();
                     if (Objects.isNull(connection)) {
                         notGet.incrementAndGet();
                         System.out.println("[" + threadName + " " + count + "st]get sql connection timeout。");
@@ -38,7 +38,7 @@ public class DBPoolTest {
                         connection.createStatement();
                         connection.commit();
                         geted.incrementAndGet();
-                        dbPool.releaseConnection(connection);
+                        dbPoolUseSemaphore.releaseConnection(connection);
                     }
                 } catch (Exception e) {
                     e.printStackTrace();

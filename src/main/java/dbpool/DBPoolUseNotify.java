@@ -7,7 +7,7 @@ import java.util.Objects;
 /**
  * 模拟实现一个等待超时模式的连接池
  */
-public class DBPool {
+public class DBPoolUseNotify {
 
     private LinkedList<Connection> pool = new LinkedList<>();
 
@@ -15,7 +15,7 @@ public class DBPool {
      * 初始化数据库连接池
      * @param poolSize
      */
-    public DBPool(int poolSize) {
+    public DBPoolUseNotify(int poolSize) {
         if (poolSize > 0){
             for (int i = 0; i < poolSize; i ++) {
                 pool.addLast(new SqlConnectionImpl());

@@ -1,6 +1,6 @@
-package forkjoin.sum;
+package tool.forkjoin.sum;
 
-import forkjoin.MakeArray;
+import tool.forkjoin.MakeArray;
 
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;

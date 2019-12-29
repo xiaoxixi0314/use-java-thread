@@ -1,4 +1,4 @@
-package forkjoin;
+package tool.forkjoin;
 
 import org.springframework.util.CollectionUtils;
 

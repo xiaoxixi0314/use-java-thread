@@ -1,6 +1,6 @@
-package forkjoin.sum;
+package tool.forkjoin.sum;
 
-import forkjoin.MakeArray;
+import tool.forkjoin.MakeArray;
 
 /**
  * 单线程的sum
