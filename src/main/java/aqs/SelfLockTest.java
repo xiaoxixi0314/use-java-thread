@@ -4,6 +4,9 @@ import base.util.SleepTool;
 
 import java.util.concurrent.locks.Lock;
 
+/**
+ * 测试自己实现的锁
+ */
 public class SelfLockTest {
 
     private static final int THREAD_NUMS = 4;
