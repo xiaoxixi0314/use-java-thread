@@ -1,4 +1,4 @@
-package waitnotify;
+package lock.condition;
 
 import base.util.SleepTool;
 

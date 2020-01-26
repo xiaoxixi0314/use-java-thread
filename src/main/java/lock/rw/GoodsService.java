@@ -1,4 +1,8 @@
 package lock.rw;
 
-public class GoodsService {
+public interface GoodsService {
+
+    Goods getGoods();
+
+    void setNum();
 }
