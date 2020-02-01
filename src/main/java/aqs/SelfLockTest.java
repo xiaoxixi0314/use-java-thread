@@ -24,6 +24,7 @@ public class SelfLockTest {
             try {
                 lock.lock();
                 SleepTool.sleepMills(1000);
+                System.out.println(Thread.currentThread().getName());
             }finally {
                 lock.unlock();
             }
