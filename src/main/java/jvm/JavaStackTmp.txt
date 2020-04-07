@@ -1,0 +1,113 @@
+Classfile /F:/study/use-java-thread/target/classes/jvm/JavaStackTmp.class
+  Last modified 2020-4-6; size 764 bytes
+  MD5 checksum e26122a9b0dec4abd243d5970338c95f
+  Compiled from "JavaStackTmp.java"
+public class jvm.JavaStackTmp
+  SourceFile: "JavaStackTmp.java"
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #8.#29         //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #30.#31        //  java/lang/System.out:Ljava/io/PrintStream;
+   #3 = Class              #32            //  jvm/JavaStackTmp
+   #4 = String             #33            //  hello world!
+   #5 = Methodref          #34.#35        //  java/io/PrintStream.println:(Ljava/lang/String;)V
+   #6 = Methodref          #3.#29         //  jvm/JavaStackTmp."<init>":()V
+   #7 = Methodref          #3.#36         //  jvm/JavaStackTmp.money:(I)V
+   #8 = Class              #37            //  java/lang/Object
+   #9 = Utf8               HELLO_WORD
+  #10 = Utf8               Ljava/lang/String;
+  #11 = Utf8               ConstantValue
+  #12 = Utf8               <init>
+  #13 = Utf8               ()V
+  #14 = Utf8               Code
+  #15 = Utf8               LineNumberTable
+  #16 = Utf8               LocalVariableTable
+  #17 = Utf8               this
+  #18 = Utf8               Ljvm/JavaStackTmp;
+  #19 = Utf8               money
+  #20 = Utf8               (I)V
+  #21 = Utf8               I
+  #22 = Utf8               main
+  #23 = Utf8               ([Ljava/lang/String;)V
+  #24 = Utf8               args
+  #25 = Utf8               [Ljava/lang/String;
+  #26 = Utf8               stack
+  #27 = Utf8               SourceFile
+  #28 = Utf8               JavaStackTmp.java
+  #29 = NameAndType        #12:#13        //  "<init>":()V
+  #30 = Class              #38            //  java/lang/System
+  #31 = NameAndType        #39:#40        //  out:Ljava/io/PrintStream;
+  #32 = Utf8               jvm/JavaStackTmp
+  #33 = Utf8               hello world!
+  #34 = Class              #41            //  java/io/PrintStream
+  #35 = NameAndType        #42:#43        //  println:(Ljava/lang/String;)V
+  #36 = NameAndType        #19:#20        //  money:(I)V
+  #37 = Utf8               java/lang/Object
+  #38 = Utf8               java/lang/System
+  #39 = Utf8               out
+  #40 = Utf8               Ljava/io/PrintStream;
+  #41 = Utf8               java/io/PrintStream
+  #42 = Utf8               println
+  #43 = Utf8               (Ljava/lang/String;)V
+{
+  public static final java.lang.String HELLO_WORD;
+    flags: ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    ConstantValue: String hello world!
+
+  public jvm.JavaStackTmp();
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 3: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   Ljvm/JavaStackTmp;
+
+  public void money(int);
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: ldc           #4                  // String hello world!
+         5: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+         8: iload_1       
+         9: bipush        100
+        11: isub          
+        12: istore_1      
+        13: return        
+      LineNumberTable:
+        line 8: 0
+        line 9: 8
+        line 10: 13
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      14     0  this   Ljvm/JavaStackTmp;
+               0      14     1 money   I
+
+  public static void main(java.lang.String[]);
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: new           #3                  // class jvm/JavaStackTmp
+         3: dup           
+         4: invokespecial #6                  // Method "<init>":()V
+         7: astore_1      
+         8: aload_1       
+         9: bipush        100
+        11: invokevirtual #7                  // Method money:(I)V
+        14: return        
+      LineNumberTable:
+        line 13: 0
+        line 14: 8
+        line 15: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      15     0  args   [Ljava/lang/String;
+               8       7     1 stack   Ljvm/JavaStackTmp;
+}

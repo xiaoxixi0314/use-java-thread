@@ -1,5 +1,7 @@
+import org.apache.commons.lang3.time.DateUtils;
+
 import java.math.BigDecimal;
-import java.util.Objects;
+import java.util.*;
 
 public class TagUtils {
 
@@ -59,8 +61,12 @@ public class TagUtils {
         }
     }
 
+    public static Date calcExceptDeliveryTime4NextDay(Date orderTime) {
+        return DateUtils.truncate(DateUtils.addDays(orderTime, 1), Calendar.DAY_OF_MONTH);
+    }
     public static void main(String[] ags) {
-        System.out.println(transSaleCountFromMallSaleCount(new BigDecimal(1), "斤", 100L));
 
+        Long money = new BigDecimal("1.000").multiply(new BigDecimal("2000")).setScale(0, BigDecimal.ROUND_HALF_UP).longValue();
+        System.out.println(money);
     }
 }

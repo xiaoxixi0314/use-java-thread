@@ -1,0 +1,88 @@
+Classfile /F:/study/use-java-thread/target/classes/jvm/JavaStack.class
+  Last modified 2020-4-6; size 528 bytes
+  MD5 checksum 574a08ae00bae2ba669a0359701f9451
+  Compiled from "JavaStack.java"
+public class jvm.JavaStack
+  SourceFile: "JavaStack.java"
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#23         //  java/lang/Object."<init>":()V
+   #2 = Class              #24            //  jvm/JavaStack
+   #3 = Methodref          #2.#23         //  jvm/JavaStack."<init>":()V
+   #4 = Methodref          #2.#25         //  jvm/JavaStack.money:(I)V
+   #5 = Class              #26            //  java/lang/Object
+   #6 = Utf8               <init>
+   #7 = Utf8               ()V
+   #8 = Utf8               Code
+   #9 = Utf8               LineNumberTable
+  #10 = Utf8               LocalVariableTable
+  #11 = Utf8               this
+  #12 = Utf8               Ljvm/JavaStack;
+  #13 = Utf8               money
+  #14 = Utf8               (I)V
+  #15 = Utf8               I
+  #16 = Utf8               main
+  #17 = Utf8               ([Ljava/lang/String;)V
+  #18 = Utf8               args
+  #19 = Utf8               [Ljava/lang/String;
+  #20 = Utf8               stack
+  #21 = Utf8               SourceFile
+  #22 = Utf8               JavaStack.java
+  #23 = NameAndType        #6:#7          //  "<init>":()V
+  #24 = Utf8               jvm/JavaStack
+  #25 = NameAndType        #13:#14        //  money:(I)V
+  #26 = Utf8               java/lang/Object
+{
+  public jvm.JavaStack();
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 3: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   Ljvm/JavaStack;
+
+  public void money(int);
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: iload_1       
+         1: bipush        100
+         3: isub          
+         4: istore_1      
+         5: return        
+      LineNumberTable:
+        line 6: 0
+        line 7: 5
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       6     0  this   Ljvm/JavaStack;
+               0       6     1 money   I
+
+  public static void main(java.lang.String[]);
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: new           #2                  // class jvm/JavaStack
+         3: dup           
+         4: invokespecial #3                  // Method "<init>":()V
+         7: astore_1      
+         8: aload_1       
+         9: bipush        100
+        11: invokevirtual #4                  // Method money:(I)V
+        14: return        
+      LineNumberTable:
+        line 10: 0
+        line 11: 8
+        line 12: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      15     0  args   [Ljava/lang/String;
+               8       7     1 stack   Ljvm/JavaStack;
+}
